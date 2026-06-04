@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelurahan Jemawan - Galeri</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGASI ===== -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="gambar/logo desa jemawan_UAS.png"
+           alt="Logo Desa Jemawan"
+           class="nav-logo-img">
+      <div class="nav-text">
+        <div class="nav-title">Kel. Jemawan</div>
+        <div class="nav-subtitle">Kec. Jatinom • Kab. Klaten</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <!-- PERBAIKAN: href disamakan persis dengan nama file (galeri.html, bukan Galeri.html) -->
+      <a href="galeri.html" class="active">Galeri</a>
+      <!-- PERBAIKAN: typo "unduahn.html" diperbaiki menjadi "unduhan.html" -->
+      <a href="unduhan.html">Unduhan</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero-sm">
+    <div class="hero-badge">📸 GALERI FOTO</div>
+    <h1>Galeri <span>Warga</span></h1>
+    <p class="hero-sub">Foto-foto kegiatan dan potensi Kelurahan Jemawan</p>
+  </section>
+
+  <!-- ===== GALERI ===== -->
+  <section class="section">
+    <div class="container">
+
+      <!-- Tombol filter kategori -->
+      <div class="galeri-filter">
+        <!-- PERBAIKAN: tambah onclick pada setiap tombol agar filter benar-benar bekerja -->
+        <button class="filter-btn active" data-filter="all" onclick="filterGaleri('all', this)">🗂️ Semua</button>
+        <button class="filter-btn" data-filter="kegiatan" onclick="filterGaleri('kegiatan', this)">🎉 Kegiatan</button>
+        <button class="filter-btn" data-filter="pembangunan" onclick="filterGaleri('pembangunan', this)">🏗️ Pembangunan</button>
+        <button class="filter-btn" data-filter="alam" onclick="filterGaleri('alam', this)">🌿 Alam & Wisata</button>
+        <button class="filter-btn" data-filter="budaya" onclick="filterGaleri('budaya', this)">🎭 Budaya</button>
+      </div>
+
+      <!-- Grid foto galeri -->
+      <!-- PERBAIKAN: gambar diganti emoji besar sebagai placeholder karena
+           folder assets/img/ tidak ada dalam project. Jika sudah punya foto,
+           ganti bagian <div class="galeri-emoji"> dengan <img src="..."> -->
+      <div class="galeri-grid" id="galeri-grid">
+
+        <div class="galeri-item" data-category="kegiatan">
+              <img src="gambar/dokm hut ri.jpg" alt="Memperingati HUT RI">
+          <div class="galeri-overlay">
+            <span class="galeri-caption">Memperingatan HUT RI</span>
+          </div>
+        </div>
+
+        <div class="galeri-item" data-category="alam">
+               <img src="gambar/dokm pendampingan usaha pertanian.jpg" alt="Kegiatan Pendamping Usaha Pertanian">
+          <div class="galeri-overlay">
+            <span class="galeri-caption">Kegiatan Pendamping Usaha Petani</span>
+          </div>
+        </div>
+
+        <div class="galeri-item" data-category="budaya">
+              <img src="gambar/mengikuti kirab budaya kltn.jpg" alt="Mengikuti Kirab Budaya Klaten">
+          <div class="galeri-overlay">
+            <span class="galeri-caption">Mengikuti Kirab Budaya Klaten</span>
+          </div>
+        </div>
+
+        <div class="galeri-item" data-category="kegiatan">
+              <img src="gambar/koprasi desa.jpg" alt="Pembetukan Koprasi Merah Putih Warga">
+          <div class="galeri-overlay">
+            <span class="galeri-caption">Pembetukan Koprasi Merah Putih Warga</span>
+          </div>
+        </div>
+
+        <div class="galeri-item" data-category="kegiatan">
+              <img src="gambar/posyandu.jpg" alt="Posyandu Balita">
+          <div class="galeri-overlay">
+            <span class="galeri-caption">Posyandu Balita</span>
+          </div>
+        </div>
+
+        <div class="galeri-item" data-category="pembangunan">
+               <img src="gambar/pemebanaran jalan.jpg" alt="Renovasi Jalan Desa Jemawan">
+          <div class="galeri-overlay">
+            <span class="galeri-caption">Renovasi Jalan Desa Jemawan</span>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <span class="footer-leaf">🌿</span>
+    <h3>Kelurahan Jemawan</h3>
+    <p>Kec. Jatinom, Kab. Klaten, Jawa Tengah<br>Melayani dengan Sepenuh Hati</p>
+    <div class="footer-copy">© 2026 Kelurahan Jemawan. Hak Cipta Dilindungi.</div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+
+</body>
+</html>

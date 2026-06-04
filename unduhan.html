@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelurahan Jemawan - Unduhan</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGASI ===== -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="gambar/logo desa jemawan_UAS.png"
+           alt="Logo Desa Jemawan"
+           class="nav-logo-img">
+      <div class="nav-text">
+        <div class="nav-title">Kel. Jemawan</div>
+        <div class="nav-subtitle">Kec. Jatinom • Kab. Klaten</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="unduhan.html" class="active">Unduhan</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero-sm">
+    <div class="hero-badge">📥 UNDUHAN DOKUMEN</div>
+    <h1>Unduhan <span>Dokumen</span></h1>
+    <p class="hero-sub">Unduh formulir dan dokumen penting Kelurahan Jemawan</p>
+  </section>
+
+  <!-- ===== DAFTAR UNDUHAN ===== -->
+  <section class="section">
+    <div class="sec-head">
+      <div class="tag">UNDUHAN</div>
+      <h2>Dokumen <span>Publik</span></h2>
+      <p>Unduh formulir dan dokumen penting</p>
+      <div class="gold-line"></div>
+    </div>
+
+    <!-- PERBAIKAN: hapus tag <div class="lay-grid"> yang tidak diperlukan dan
+         menyebabkan layout rusak karena unduhan-list sudah punya style sendiri -->
+    <div class="unduhan-list">
+
+      <!-- Dokumen Pengumuman -->
+      <div class="unduhan-card">
+        <!-- PERBAIKAN: ganti <img> dengan emoji karena file gambar pdf-icon.png
+             tidak ada dalam project, supaya tidak muncul gambar rusak (broken image) -->
+        <div class="unduhan-thumb-emoji">📄</div>
+        <span class="file-type">PDF</span>
+        <h4>Dokumen Pengumuman Desa</h4>
+        <p>Unduh pengumuman resmi kegiatan desa</p>
+        <!-- PERBAIKAN: path diperbaiki ke lokasi file yang memang ada dalam project -->
+        <a href="surat/DOKUMEN PENGUMUMAN DESA.pdf" download class="btn-download">
+          ⬇️ Download
+        </a>
+      </div>
+
+      <!-- Flyer Kegiatan -->
+      <div class="unduhan-card">
+        <div class="unduhan-thumb-emoji">🖼️</div>
+        <span class="file-type">JPG</span>
+        <h4>Flyer Bazzar Desa</h4>
+        <p>Unduh flyer promosi kegiatan desa</p>
+        <!-- CATATAN: file gambar/flyer1.jpg belum ada, silakan tambahkan file-nya
+             di folder gambar/ jika ingin tombol download ini berfungsi -->
+        <a href="gambar/bazar.jpeg" download class="btn-download">
+          ⬇️ Download
+        </a>
+      </div>
+
+      <!-- Flyer HUT RI -->
+      <div class="unduhan-card">
+        <div class="unduhan-thumb-emoji">🎆</div>
+        <span class="file-type">PNG</span>
+        <h4>Flyer HUT RI 81</h4>
+        <p>Unduh flyer kegiatan Jalan Sehat dan Senam Bersama</p>
+        <!-- CATATAN: file gambar/flyer-hutri.png belum ada, silakan tambahkan -->
+        <a href="gambar/huutri.jpg" download class="btn-download">
+          ⬇️ Download
+        </a>
+      </div>
+
+    </div><!-- /unduhan-list -->
+
+  </section><!-- /section -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <span class="footer-leaf">🌿</span>
+    <h3>Kelurahan Jemawan</h3>
+    <p>Kec. Jatinom, Kab. Klaten, Jawa Tengah<br>Melayani dengan Sepenuh Hati</p>
+    <div class="footer-copy">© 2026 Kelurahan Jemawan. Hak Cipta Dilindungi.</div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="script.js"></script>
+  <!-- PERBAIKAN: hapus pemanggilan renderUnduhan() karena fungsi itu tidak ada
+       di script.js, sehingga sebelumnya menyebabkan error "renderUnduhan is not defined" -->
+
+</body>
+</html>

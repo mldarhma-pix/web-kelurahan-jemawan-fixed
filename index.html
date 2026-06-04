@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kelurahan Jemawan - Beranda</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ===== NAVIGASI ===== -->
+  <nav class="nav">
+    <div class="nav-logo">
+      <img src="gambar/logo desa jemawan_UAS.png"
+           alt="Logo Desa Jemawan"
+           class="nav-logo-img">
+      <div class="nav-text">
+        <div class="nav-title">Kel. Jemawan</div>
+        <div class="nav-subtitle">Kec. Jatinom • Kab. Klaten</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="index.html" class="active">Beranda</a>
+      <a href="profil.html">Profil</a>
+      <a href="galeri.html">Galeri</a>
+      <a href="unduhan.html">Unduhan</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO / SELAMAT DATANG =====
+       CATATAN: Beranda hanya menampilkan bagian selamat datang saja
+       sesuai permintaan. Bagian statistik, visi misi, unduhan populer,
+       dan galeri singkat sudah dihapus dari halaman ini. -->
+  <section class="hero">
+    <span class="leaf-float lf1">🍃</span>
+    <span class="leaf-float lf2">🌿</span>
+    <span class="leaf-float lf3">🍃</span>
+    <span class="leaf-float lf4">🌿</span>
+    <div class="hero-badge">🏡 KELURAHAN JEMAWAN</div>
+    <h1>Selamat Datang di<br><span>Kelurahan Jemawan</span></h1>
+    <p class="hero-sub">Melayani dengan hati, membangun dengan semangat kebersamaan</p>
+    <div class="hero-btns">
+      <!-- PERBAIKAN: tombol "Buat Surat" diarahkan ke unduhan.html (bukan galeri.html) -->
+      <a href="unduhan.html" class="btn-gold">📋 Unduh Dokumen</a>
+      <!-- PERBAIKAN: tombol "Hubungi Kami" diarahkan ke profil.html karena
+           kontak.html tidak ada dalam project ini -->
+      <a href="profil.html" class="btn-outline">📞 Hubungi Kami</a>
+    </div>
+    <div class="hero-img">
+      <div class="hero-img-icon">🏘️</div>
+      <div class="hero-img-caption">Balai Kelurahan Jemawan — Kecamatan Jatinom</div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <span class="footer-leaf">🌿</span>
+    <h3>Kelurahan Jemawan</h3>
+    <p>Kec. Jatinom, Kab. Klaten, Jawa Tengah<br>Melayani dengan Sepenuh Hati</p>
+    <div class="footer-copy">© 2026 Kelurahan Jemawan. Hak Cipta Dilindungi.</div>
+  </footer>
+
+  <!-- Toast notifikasi -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Animasi counter statistik sudah dihapus karena elemen statistiknya tidak ada lagi
+
+    // Toast sambutan muncul 0,6 detik setelah halaman dibuka
+    setTimeout(() => showToast('👋 Selamat datang di Kelurahan Jemawan!'), 600);
+  </script>
+
+</body>
+</html>

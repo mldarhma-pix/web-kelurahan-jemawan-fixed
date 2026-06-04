@@ -1,0 +1,1190 @@
+/* =========================================
+   KELURAHAN JEMAWAN — style.css
+   Palet: Hijau Muda, Hijau Tua, Emas
+   ========================================= */
+
+/* ===== VARIABEL WARNA ===== */
+:root {
+  --hijau-muda:  #a8d5a2;
+  --hijau-muda2: #c8e6c4;
+  --hijau-tua:   #2d6a4f;
+  --hijau-tua2:  #1b4332;
+  --emas:        #c9a227;
+  --emas2:       #f0c040;
+  --krem:        #f9f5e7;
+}
+
+/* ===== RESET ===== */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  background: var(--krem);
+  color: #333;
+  font-size: 13px;
+  overflow-x: hidden;
+}
+
+/* =============================================
+   NAVIGASI
+   ============================================= */
+.nav {
+  background: var(--hijau-tua2);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.25);
+}
+
+.nav-logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.nav-logo-img{
+  width:50px;
+  height:50px;
+  object-fit:contain;
+}
+
+.nav-leaf {
+  font-size: 20px;
+  animation: floatLeaf 3s ease-in-out infinite;
+}
+
+.nav-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.nav-title{
+  color:var(--emas2);
+  font-size:18px;
+  font-weight:700;
+  line-height:1.2;
+}
+
+.nav-subtitle{
+  color:var(--emas2);
+  font-size:12px;
+  margin-top:2px;
+}
+.nav-links {
+  display: flex;
+  gap: 4px;
+}
+
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s;
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  background: var(--emas);
+  color: var(--hijau-tua2);
+  font-weight: 700;
+  border-color: var(--emas);
+}
+
+/* =============================================
+   HERO
+   ============================================= */
+.hero {
+  background: url('gambar/sawah.jpeg');
+  padding: 200px 40px 200px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-sm {
+  padding: 28px 20px 22px;
+}
+
+/* Daun melayang */
+.leaf-float {
+  position: absolute;
+  font-size: 22px;
+  animation: floatLeaf 6s ease-in-out infinite;
+  opacity: 0.18;
+  pointer-events: none;
+}
+.lf1 { top: 10%; left:  5%; animation-delay: 0s; }
+.lf2 { top: 20%; right: 8%; animation-delay: 1.5s; font-size: 16px; }
+.lf3 { top: 65%; left:  3%; animation-delay: 3s; }
+.lf4 { top: 70%; right: 6%; animation-delay: 2s; font-size: 26px; }
+
+.hero-badge {
+  display: inline-block;
+  background: var(--emas);
+  color: var(--hijau-tua2);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.35;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.25);
+}
+
+.hero h1 span {
+  color: var(--emas2);
+}
+
+.hero-sub {
+  color: rgba(255,255,255,0.7);
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.hero-btns {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Gambar / ilustrasi di hero */
+.hero-img {
+  width: 100%;
+  max-width: 440px;
+  height: 100px;
+  margin: 20px auto 0;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #8effc65a, var(--hijau-muda));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid var(--emas);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-img-icon {
+  font-size: 42px;
+  animation: bounce 2.5s ease-in-out infinite;
+}
+
+.hero-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: var(--hijau-tua2);
+  font-size: 10px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.8);
+  padding: 3px 0;
+}
+
+/* =============================================
+   TOMBOL
+   ============================================= */
+.btn-gold {
+  background: var(--emas);
+  color: var(--hijau-tua2);
+  padding: 9px 18px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Poppins', sans-serif;
+}
+.btn-gold:hover {
+  background: var(--emas2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(201,162,39,0.4);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fff;
+  padding: 9px 18px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  border: 2px solid rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+.btn-outline:hover {
+  border-color: var(--emas2);
+  color: var(--emas2);
+  transform: translateY(-2px);
+}
+
+/* =============================================
+   STATISTIK
+   ============================================= */
+.stats-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  padding: 16px 14px;
+  background: var(--hijau-tua);
+}
+
+.stat-card {
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  padding: 12px 6px;
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.stat-icon { font-size: 18px; margin-bottom: 3px; }
+.stat-num  { color: var(--emas2); font-size: 20px; font-weight: 700; }
+.stat-label{ color: rgba(255,255,255,0.75); font-size: 9px; margin-top: 2px; }
+
+/* =============================================
+   SECTION & HEADING
+   ============================================= */
+.section {
+  padding: 24px 16px;
+}
+
+.section-white {
+  background: #fff;
+}
+
+.sec-head {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.tag {
+  display: inline-block;
+  background: var(--hijau-muda2);
+  color: var(--hijau-tua2);
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 0.8px;
+  border: 1px solid var(--hijau-muda);
+}
+
+.tag-dark {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border-color: rgba(255,255,255,0.25);
+}
+
+.sec-head h2 {
+  color: var(--hijau-tua2);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.sec-head h2 span {
+  color: var(--emas);
+}
+
+.sec-head p {
+  color: #666;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.gold-line {
+  width: 44px;
+  height: 3px;
+  background: var(--emas);
+  border-radius: 2px;
+  margin: 8px auto 0;
+}
+
+.divider {
+  height: 4px;
+  background: linear-gradient(90deg, var(--hijau-tua2), var(--emas), var(--hijau-tua2));
+}
+
+/* =============================================
+   VISI MISI
+   ============================================= */
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.vm-full {
+  grid-column: 1 / -1;
+}
+
+.vm-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px 14px;
+  border: 1.5px solid var(--hijau-muda);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.vm-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--hijau-tua), var(--emas));
+}
+
+.vm-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(45,106,79,0.15);
+}
+
+.vm-icon {
+  font-size: 24px;
+  display: block;
+  margin-bottom: 7px;
+  animation: wiggle 3s ease-in-out infinite;
+}
+
+.vm-card h3 {
+  color: var(--hijau-tua2);
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.vm-card p {
+  color: #555;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* =============================================
+   GALERI
+   ============================================= */
+.galeri-grid{
+  max-width: 1200px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* ===== GALERI PAGE ===== */
+.galeri-hero {
+  background: linear-gradient(135deg, var(--hijau-muda), var(--hijau-tua));
+  padding: 120px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.galeri-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at center, rgba(124,58,237,0.3) 0%, transparent 70%);
+}
+.galeri-hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 5vw, 56px);
+  color: var(--white);
+  font-weight: 900;
+  position: relative;
+  margin-bottom: 16px;
+}
+.galeri-hero p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.7);
+  position: relative;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.galeri-filter {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+/* Syarat Umum */
+.syarat-box {
+  background: var(--hijau-muda2);
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 14px;
+  border: 1.5px solid var(--hijau-muda);
+}
+
+.syarat-title {
+  font-size: 11px;
+  color: var(--hijau-tua2);
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.syarat-list {
+  font-size: 10px;
+  color: #444;
+  line-height: 2;
+}
+
+/* =============================================
+   UNDUHAN
+   ============================================= */
+.unduhan-list{
+  max-width:1200px;
+  margin:40px auto 80px;
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:25px;
+}
+
+.unduhan-card{
+  background:#fff;
+  border:1px solid var(--hijau-muda);
+  border-radius:20px;
+  padding:25px;
+  text-align:center;
+  transition:0.3s;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.unduhan-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.unduhan-thumb{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  margin:0 auto 15px;
+}
+
+.unduhan-thumb img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+}
+
+.unduhan-meta h4{
+    color:var(--hijau-tua2);
+    margin:10px 0;
+}
+
+.unduhan-meta p{
+    color:#666;
+    font-size:12px;
+}
+
+/* Filter unduhan */
+.unduhan-filter {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.filter-btn {
+  background: var(--hijau-muda2);
+  color: var(--hijau-tua2);
+  border: 1px solid var(--hijau-muda);
+  border-radius: 20px;
+  padding: 5px 13px;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+}
+
+.filter-btn:hover {
+  background: var(--hijau-tua);
+  color: #fff;
+}
+
+.filter-active {
+  background: var(--hijau-tua2) !important;
+  color: #fff !important;
+  border-color: var(--hijau-tua2) !important;
+}
+
+/* Detail unduhan */
+.btn-back {
+  background: var(--hijau-muda2);
+  color: var(--hijau-tua2);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s;
+}
+
+.btn-back:hover {
+  background: var(--hijau-muda);
+}
+
+.bdetail-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1.5px solid var(--hijau-muda);
+}
+
+.bdetail-img {
+  width: 100%;
+  height: 120px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--hijau-muda), var(--hijau-tua));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.bdetail-box h2 {
+  color: var(--hijau-tua2);
+  font-size: 15px;
+  font-weight: 700;
+  margin: 10px 0 8px;
+  line-height: 1.4;
+}
+
+.bdetail-box p {
+  color: #555;
+  font-size: 11px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+/* =============================================
+   PROFIL
+   ============================================= */
+.profil-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px 16px;
+  border: 1.5px solid var(--hijau-muda);
+  margin-bottom: 14px;
+}
+
+.profil-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--hijau-muda), var(--hijau-tua));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 10px;
+  border: 3px solid var(--emas);
+}
+
+.profil-name {
+  color: var(--hijau-tua2);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3px;
+}
+
+.profil-jabatan {
+  color: var(--emas);
+  font-size: 11px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.info-box {
+  background: var(--hijau-muda2);
+  border-radius: 8px;
+  padding: 9px 10px;
+  border: 1px solid var(--hijau-muda);
+}
+
+.info-label { color: #888; font-size: 9px; margin-bottom: 2px; }
+.info-val   { color: var(--hijau-tua2); font-size: 12px; font-weight: 700; }
+
+/* Pejabat grid */
+.pejabat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.pj-card {
+  background: var(--hijau-muda2);
+  border-radius: 10px;
+  padding: 12px 10px;
+  text-align: center;
+  border: 1px solid var(--hijau-muda);
+  transition: all 0.3s;
+}
+
+.pj-card:hover {
+  border-color: var(--hijau-tua);
+  background: var(--hijau-muda);
+  transform: translateY(-2px);
+}
+
+.pj-ava { font-size: 22px; margin-bottom: 5px; }
+
+.pj-card h4 {
+  color: var(--hijau-tua2);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.pj-card p {
+  color: #666;
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+/* Sejarah */
+.sejarah-box {
+  background: var(--hijau-muda2);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1.5px solid var(--hijau-muda);
+}
+
+.sejarah-box p {
+  color: var(--hijau-tua2);
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+/* =============================================
+   KONTAK
+   ============================================= */
+.kontak-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.kontak-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 12px 10px;
+  border: 1.5px solid var(--hijau-muda2);
+  transition: all 0.3s;
+}
+
+.kontak-item:hover {
+  border-color: var(--hijau-tua);
+  background: var(--hijau-muda2);
+  transform: translateY(-2px);
+}
+
+.kontak-icon { font-size: 20px; margin-bottom: 5px; display: block; }
+
+.kontak-item h4 {
+  color: var(--hijau-tua2);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.kontak-item p {
+  color: #666;
+  font-size: 10px;
+  line-height: 1.6;
+  margin-top: 3px;
+}
+
+/* Form kontak */
+.kontak-form-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  border: 1.5px solid var(--hijau-muda);
+}
+
+/* =============================================
+   FORM FIELDS
+   ============================================= */
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--hijau-tua2);
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 9px 11px;
+  border: 1.5px solid var(--hijau-muda);
+  border-radius: 8px;
+  font-size: 12px;
+  font-family: 'Poppins', sans-serif;
+  outline: none;
+  transition: border 0.2s;
+  background: #f9fff9;
+  color: #333;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--hijau-tua);
+  background: #fff;
+}
+
+.form-group textarea {
+  height: 75px;
+  resize: none;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 11px;
+  background: var(--hijau-tua2);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 4px;
+  transition: all 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-submit:hover {
+  background: var(--hijau-tua);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(27,67,50,0.3);
+}
+
+/* Pesan sukses */
+.success-msg {
+  background: #f0fff4;
+  border: 1.5px solid var(--hijau-muda);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+  display: none;
+  margin-top: 10px;
+}
+
+.success-icon {
+  font-size: 34px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.success-msg p {
+  color: var(--hijau-tua2);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =============================================
+   DOWNLOAD SECTION
+   ============================================= */
+.dl-section {
+  background: var(--hijau-tua2);
+  padding: 24px 16px;
+}
+
+.dl-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.dl-card {
+  background: rgba(255,255,255,0.12);
+  border-radius: 10px;
+  padding: 12px 10px;
+  border: 1px solid rgba(255,255,255,0.2);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.dl-card:hover {
+  background: rgba(255,255,255,0.22);
+  transform: scale(1.02);
+}
+
+.dl-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--emas);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  flex-shrink: 0;
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.dl-info h4 { color: #fff; font-size: 11px; font-weight: 600; }
+.dl-info p  { color: rgba(255,255,255,0.6); font-size: 9px; margin-top: 1px; }
+
+.dl-bar {
+  height: 3px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+  margin-top: 6px;
+  overflow: hidden;
+}
+
+.dl-bar-fill {
+  height: 100%;
+  background: var(--emas2);
+  border-radius: 2px;
+  width: 0;
+  transition: width 1.5s ease;
+}
+
+/* =============================================
+   MODAL
+   ============================================= */
+.modal-bg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.modal-bg.open {
+  display: flex;
+}
+
+.modal-box {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 88vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  background: var(--hijau-tua2);
+  padding: 14px 16px;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.modal-header h3 {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: opacity 0.2s;
+}
+
+.modal-close:hover { opacity: 0.7; }
+
+.modal-body { padding: 16px; }
+
+/* =============================================
+   FOOTER
+   ============================================= */
+.footer {
+  background: var(--hijau-tua2);
+  padding: 20px 16px 14px;
+  text-align: center;
+  border-top: 3px solid var(--emas);
+}
+
+.footer-leaf {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 6px;
+  animation: floatLeaf 3s ease-in-out infinite;
+}
+
+.footer h3 {
+  color: var(--emas2);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer p {
+  color: rgba(255,255,255,0.65);
+  font-size: 10px;
+  margin-top: 4px;
+  line-height: 1.7;
+}
+
+.footer-copy {
+  color: rgba(255,255,255,0.3);
+  font-size: 9px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+/* =============================================
+   TOAST NOTIFIKASI
+   ============================================= */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  background: var(--hijau-tua2);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  border-left: 4px solid var(--emas);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  transform: translateY(10px);
+  max-width: 260px;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============================================
+   ANIMASI
+   ============================================= */
+@keyframes floatLeaf {
+  0%, 100% { transform: translateY(0)   rotate(-8deg); }
+  50%       { transform: translateY(-12px) rotate(8deg); }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.08); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-8deg); }
+  50%       { transform: rotate(8deg); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* =============================================
+   RESPONSIVE — tablet ke atas
+   ============================================= */
+@media (min-width: 540px) {
+  .lay-grid    { grid-template-columns: repeat(3, 1fr); }
+  .pejabat-grid{ grid-template-columns: repeat(3, 1fr); }
+  .kontak-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 768px) {
+  .hero h1   { font-size: 28px; }
+  .lay-grid  { grid-template-columns: repeat(4, 1fr); }
+  .dl-grid   { grid-template-columns: repeat(4, 1fr); }
+  .stats-bar { padding: 20px 30px; gap: 14px; }
+  .section   { padding: 32px 40px; }
+  .nav       { padding: 12px 32px; }
+  .modal-box { max-width: 480px; }
+}
+
+@media (max-width: 992px){
+    .unduhan-list{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 768px){
+    .unduhan-list{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet */
+@media (max-width: 992px){
+  .galeri-grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* HP */
+@media (max-width: 576px){
+  .galeri-grid{
+    grid-template-columns: 1fr;
+  }
+}
+/* =============================================
+   PERBAIKAN TAMBAHAN
+   ============================================= */
+
+/* Placeholder emoji untuk item galeri (karena folder assets/img/ tidak ada) */
+.galeri-emoji {
+  font-size: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+}
+
+/* Placeholder emoji untuk ikon unduhan (karena file pdf-icon.png tidak ada) */
+.unduhan-thumb-emoji {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* =============================================
+   UKURAN GAMBAR GALERI
+   ============================================= */
+
+/* Kotak setiap item galeri — ubah height untuk tinggi foto */
+.galeri-item {
+  height: 220px;        /* tinggi kotak foto, ubah sesuai selera */
+  overflow: hidden;     /* sembunyikan bagian foto yang keluar kotak */
+  border-radius: 12px;  /* sudut melengkung */
+  position: relative;   /* supaya overlay caption bisa diposisikan */
+  cursor: pointer;
+}
+
+/* Foto di dalam kotak galeri */
+.galeri-item img {
+  width: 100%;          /* lebar foto ikuti lebar kotak */
+  height: 100%;         /* tinggi foto ikuti tinggi kotak */
+  object-fit: cover;    /* foto dipotong supaya pas kotak, tidak gepeng/meregang */
+  object-position: center; /* bagian tengah foto yang ditampilkan */
+  display: block;
+  transition: transform 0.4s ease; /* animasi zoom saat hover */
+}
+
+/* Efek zoom saat foto di-hover */
+.galeri-item:hover img {
+  transform: scale(1.07); /* foto sedikit membesar saat mouse di atasnya */
+}
+
+/* Caption teks di bawah foto */
+.galeri-overlay {
+  position: absolute;   /* menempel di dalam kotak */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.6)); /* gradien gelap di bawah */
+  padding: 24px 10px 10px;
+  opacity: 0;           /* tersembunyi secara default */
+  transition: opacity 0.3s ease;
+}
+
+/* Caption muncul saat foto di-hover */
+.galeri-item:hover .galeri-overlay {
+  opacity: 1;
+}
+
+.galeri-caption {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+}
